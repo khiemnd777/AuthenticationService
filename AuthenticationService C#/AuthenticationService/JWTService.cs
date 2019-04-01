@@ -5,21 +5,44 @@ using AuthenticationService.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 
-namespace AuthenticationService.Managers
+namespace AuthenticationService
 {
     public class JWTService : IAuthService
     {
+        private string _secretKey = "TW9zaGVFcmV6UHJpdmF0ZUtleQ==";
+        private string _securityAlgorithm = SecurityAlgorithms.HmacSha256Signature;
+
         #region Members
         /// <summary>
         /// The secret key we use to encrypt out token with.
         /// </summary>
-        public string SecretKey { get; set; }
+        public string SecretKey
+        {
+            get { return _secretKey; }
+            set { _secretKey = value; }
+        }
+
+        /// <summary>
+        /// The algorithm that the signature will be created in the following.
+        /// </summary>
+        public string SecurityAlgorithm
+        {
+            get { return _securityAlgorithm; }
+            set { _securityAlgorithm = value; }
+        }
+
         #endregion
 
         #region Constructor
+
+        public JWTService()
+        {
+            
+        }
+
         public JWTService(string secretKey)
         {
-            SecretKey = secretKey;
+            _secretKey = secretKey;
         }
         #endregion
 
@@ -39,7 +62,8 @@ namespace AuthenticationService.Managers
             JwtSecurityTokenHandler jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             try
             {
-                ClaimsPrincipal tokenValid = jwtSecurityTokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken validatedToken);
+                SecurityToken validatedToken;
+                ClaimsPrincipal tokenValid = jwtSecurityTokenHandler.ValidateToken(token, tokenValidationParameters, out validatedToken);
                 return true;
             }
             catch (Exception)
@@ -64,7 +88,7 @@ namespace AuthenticationService.Managers
             {
                 Subject = new ClaimsIdentity(model.Claims),
                 Expires = DateTime.UtcNow.AddMinutes(Convert.ToInt32(model.ExpireMinutes)),
-                SigningCredentials = new SigningCredentials(GetSymmetricSecurityKey(), model.SecurityAlgorithm)
+                SigningCredentials = new SigningCredentials(GetSymmetricSecurityKey(), _securityAlgorithm)
             };
 
             JwtSecurityTokenHandler jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
@@ -92,7 +116,8 @@ namespace AuthenticationService.Managers
             JwtSecurityTokenHandler jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             try
             {
-                ClaimsPrincipal tokenValid = jwtSecurityTokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken validatedToken);
+                SecurityToken validatedToken;
+                ClaimsPrincipal tokenValid = jwtSecurityTokenHandler.ValidateToken(token, tokenValidationParameters, out validatedToken);
                 return tokenValid.Claims;
             }
             catch (Exception ex)
@@ -105,7 +130,7 @@ namespace AuthenticationService.Managers
         #region Private Methods
         private SecurityKey GetSymmetricSecurityKey()
         {
-            byte[] symmetricKey = Convert.FromBase64String(SecretKey);
+            byte[] symmetricKey = Convert.FromBase64String(_secretKey);
             return new SymmetricSecurityKey(symmetricKey);
         }
 

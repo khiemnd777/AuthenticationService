@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using AuthenticationService.Models;
 
-namespace AuthenticationService.Managers
+namespace AuthenticationService
 {
     public interface IAuthService
     {

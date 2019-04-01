@@ -42,3 +42,21 @@ C:\Users\mmosh\Desktop\Moshe Files\JWTTuts\AuthenticationService C#\Authenticati
 C:\Users\mmosh\Desktop\Moshe Files\JWTTuts\AuthenticationService C#\AuthenticationService\obj\Debug\AuthenticationService.csproj.CopyComplete
 C:\Users\mmosh\Desktop\Moshe Files\JWTTuts\AuthenticationService C#\AuthenticationService\obj\Debug\AuthenticationService.exe
 C:\Users\mmosh\Desktop\Moshe Files\JWTTuts\AuthenticationService C#\AuthenticationService\obj\Debug\AuthenticationService.pdb
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\AuthenticationService.dll
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\AuthenticationService.pdb
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Newtonsoft.Json.dll
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\Newtonsoft.Json.xml
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\obj\Debug\AuthenticationService.dll
+D:\GithubSources\AuthenticationService\AuthenticationService C#\AuthenticationService\obj\Debug\AuthenticationService.pdb
